@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Troubleshooting Assistant for Kommunicate</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        text-align: center;
+        color: blue;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .chat-widget {
+        width: 100%;
+        height: 500px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        overflow-y: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Troubleshooting Assistant for Kommunicate</h1>
+    </div>
+    <!-- Add the Kommunicate script here -->
+    <script type="text/javascript">
+      (function (d, m) {
+        var kommunicateSettings = {
+          appId: "2c3701f738e996ee80e8ef60d953a8f42",
+          popupWidget: true,
+          automaticChatOpenOnNavigation: true,
+        };
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+        var h = document.getElementsByTagName("head")[0];
+        h.appendChild(s);
+        window.kommunicate = m;
+        m._globals = kommunicateSettings;
+      })(document, window.kommunicate || {});
+      /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    </script>
+
+    <!-- Replace <APP_ID> with your actual Kommunicate app ID -->
+  </body>
+</html>
